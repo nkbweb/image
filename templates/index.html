@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Upload</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .form-container {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        .nav {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Upload an Image</h1>
+    
+    <div class="form-container">
+        <form method="POST" enctype="multipart/form-data">
+            <div>
+                <input type="file" name="image" accept="image/*">
+            </div>
+            <div>
+                <button type="submit" class="button">Upload</button>
+            </div>
+        </form>
+    </div>
+    
+    <div class="nav">
+        <a href="/gallery">View Gallery</a>
+    </div>
+</body>
+                                         </html>
