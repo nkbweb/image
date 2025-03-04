@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-gap: 15px;
+            margin-top: 20px;
+        }
+        .gallery-item {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .nav {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Gallery</h1>
+    
+    <div class="gallery">
+        {% for image in images %}
+            <div class="gallery-item">
+                <img src="{{ image.secure_url }}" alt="Uploaded image">
+            </div>
+        {% else %}
+            <p>No images uploaded yet.</p>
+        {% endfor %}
+    </div>
+    
+    <div class="nav">
+        <a href="/">Upload More Images</a>
+    </div>
+</body>
+</html>
